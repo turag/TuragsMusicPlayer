@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.hello.TuragsMusicPlayer.MainActivity">
+
+
+    <ImageView
+        android:id="@+id/cover_photoID"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        android:adjustViewBounds="false"
+        android:alpha="0.9"
+        android:cropToPadding="false"
+        android:fadeScrollbars="false"
+        android:focusable="auto"
+
+        android:scaleType="centerCrop"
+        android:src="@drawable/david" />
+
+    <TextView
+        android:id="@+id/timeOfSongID"
+        android:layout_width="35dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_toEndOf="@+id/seekBar"
+        android:text="7:00" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/profilePhotoID"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:src="@drawable/gilmour"
+        app:civ_border_color="#fff"
+        app:civ_border_width="3dp" />
+
+    <Button
+        android:id="@+id/playID"
+        android:layout_width="85dp"
+        android:layout_height="83dp"
+
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="81dp"
+        android:background="@drawable/ic_action_play" />
+
+    <Button
+        android:id="@+id/previousID"
+        android:layout_width="55dp"
+        android:layout_height="61dp"
+        android:layout_alignBottom="@+id/playID"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="-8dp"
+        android:layout_marginStart="77dp"
+        android:background="@drawable/login_ic_previous"
+        tools:ignore="UnknownId"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="77dp" />
+
+    <Button
+        android:id="@+id/nextID"
+        android:layout_width="48dp"
+        android:layout_height="60dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/previousID"
+        android:layout_marginEnd="93dp"
+        android:background="@drawable/login_ic_next"
+        tools:ignore="UnknownId"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="93dp" />
+
+    <SeekBar
+        android:id="@+id/seekBar"
+        style="@style/Widget.AppCompat.SeekBar.Discrete"
+        android:layout_width="279dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="32dp"
+        android:max="10"
+        android:progress="3" />
+
+    <TextView
+        android:id="@+id/startTimeID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/seekBar"
+        android:layout_marginStart="18dp"
+        android:text="2:20" />
+
+    <TextView
+        android:id="@+id/songNameID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="214dp"
+        android:text="A Saucerful of Secrets"
+        android:textSize="25dp"
+
+        />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView3"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-214dp"
+        android:text="pink floyd"
+        android:textSize="16dp"
+        android:textColor="#990803"
+        style="@style/AlertDialog.AppCompat.Light"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="44dp"
+        android:layout_height="36dp"
+
+        android:layout_below="@+id/textView4"
+        android:layout_marginEnd="-77dp"
+        android:layout_toStartOf="@+id/previousID"
+        android:background="@drawable/login_ic_shuffle"
+        tools:ignore="UnknownId"
+        android:layout_marginRight="-77dp"
+        android:layout_toLeftOf="@+id/previousID" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="42dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/textView4"
+        android:layout_marginStart="-93dp"
+        android:layout_toEndOf="@+id/nextID"
+        android:background="@drawable/login_ic_repeat_"
+        android:layout_marginLeft="-93dp"
+        android:layout_toRightOf="@+id/nextID" />
+
+    <Button
+        android:id="@+id/ShuffleID"
+        android:layout_width="50dp"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/button2"
+        android:layout_marginBottom="149dp"
+        android:background="@drawable/login_ic_shuffle"
+        android:layout_alignLeft="@+id/button2" />
+
+    <Button
+        android:id="@+id/repeatID"
+        android:layout_width="47dp"
+        android:layout_height="43dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/ShuffleID"
+        android:layout_marginEnd="37dp"
+        android:background="@drawable/login_ic_repeat_"
+        tools:ignore="UnknownId" />
+
+    <TextView
+        android:id="@+id/artistID"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/songNameID"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-214dp"
+        android:text="Pink Floyd"
+        android:textSize="16dp"
+        android:textColor="#830101"
+        android:textStyle="bold"/>
+
+</RelativeLayout>
